@@ -38,3 +38,6 @@ Thumbs.db
 *.log
 wandb/
 runs/
+
+# 保留 results 下的训练日志作为复现证据
+!results/*.log

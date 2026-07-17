@@ -1,0 +1,37 @@
+﻿python.exe : D:\AI_Projects\minimind\.venv\Lib\site-packages\torch\cuda\__init__.py:61: FutureWarning: The pynvml packa
+ge is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to th
+e maintainers of the package that installed pynvml for you.
+At line:4 char:1
++ & $py train_lora.py `
++ ~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\AI_Projects\...pynvml for you.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  import pynvml  # type: ignore[import]
+Model Params: 25.83M
+Trainable Params: 25.830M
+LLM 总参数量: 25.961 M
+LoRA 参数量: 0.131 M
+LoRA 参数占比: 0.50%
+
+Generating train split: 0 examples [00:00, ? examples/s]
+Generating train split: 3000 examples [00:00, 244489.80 examples/s]
+Epoch:[1/1](10/188), loss: 6.2811, logits_loss: 6.2811, aux_loss: 0.0000, lr: 0.00009937, epoch_time: 0.0min
+Epoch:[1/1](20/188), loss: 6.0811, logits_loss: 6.0811, aux_loss: 0.0000, lr: 0.00009751, epoch_time: 0.0min
+Epoch:[1/1](30/188), loss: 6.1581, logits_loss: 6.1581, aux_loss: 0.0000, lr: 0.00009446, epoch_time: 0.0min
+Epoch:[1/1](40/188), loss: 6.0997, logits_loss: 6.0997, aux_loss: 0.0000, lr: 0.00009032, epoch_time: 0.0min
+Epoch:[1/1](50/188), loss: 6.1076, logits_loss: 6.1076, aux_loss: 0.0000, lr: 0.00008519, epoch_time: 0.0min
+Epoch:[1/1](60/188), loss: 6.1506, logits_loss: 6.1506, aux_loss: 0.0000, lr: 0.00007921, epoch_time: 0.0min
+Epoch:[1/1](70/188), loss: 6.1777, logits_loss: 6.1777, aux_loss: 0.0000, lr: 0.00007257, epoch_time: 0.0min
+Epoch:[1/1](80/188), loss: 6.0493, logits_loss: 6.0493, aux_loss: 0.0000, lr: 0.00006543, epoch_time: 0.0min
+Epoch:[1/1](90/188), loss: 6.0219, logits_loss: 6.0219, aux_loss: 0.0000, lr: 0.00005801, epoch_time: 0.0min
+Epoch:[1/1](100/188), loss: 6.0195, logits_loss: 6.0195, aux_loss: 0.0000, lr: 0.00005050, epoch_time: 0.0min
+Epoch:[1/1](110/188), loss: 5.9891, logits_loss: 5.9891, aux_loss: 0.0000, lr: 0.00004311, epoch_time: 0.0min
+Epoch:[1/1](120/188), loss: 5.9307, logits_loss: 5.9307, aux_loss: 0.0000, lr: 0.00003606, epoch_time: 0.0min
+Epoch:[1/1](130/188), loss: 6.1315, logits_loss: 6.1315, aux_loss: 0.0000, lr: 0.00002953, epoch_time: 0.0min
+Epoch:[1/1](140/188), loss: 5.9833, logits_loss: 5.9833, aux_loss: 0.0000, lr: 0.00002372, epoch_time: 0.0min
+Epoch:[1/1](150/188), loss: 6.0870, logits_loss: 6.0870, aux_loss: 0.0000, lr: 0.00001877, epoch_time: 0.0min
+Epoch:[1/1](160/188), loss: 5.9378, logits_loss: 5.9378, aux_loss: 0.0000, lr: 0.00001484, epoch_time: 0.0min
+Epoch:[1/1](170/188), loss: 6.0242, logits_loss: 6.0242, aux_loss: 0.0000, lr: 0.00001202, epoch_time: 0.0min
+Epoch:[1/1](180/188), loss: 6.0225, logits_loss: 6.0225, aux_loss: 0.0000, lr: 0.00001040, epoch_time: 0.0min
+Epoch:[1/1](187/188), loss: 5.9294, logits_loss: 5.9294, aux_loss: 0.0000, lr: 0.00001001, epoch_time: 0.0min

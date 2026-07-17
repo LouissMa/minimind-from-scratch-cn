@@ -16,9 +16,9 @@
 
 **我在复现中做的工作：**
 - ✅ 在本地（Windows / RTX 4060 Laptop 8GB 单卡）完整搭建训练环境，记录依赖与踩坑（见 [环境搭建](docs/环境搭建.md)）
-- ✅ **从零跑通预训练链路**（迷你验证跑，750 步，真实 loss 8.21→5.98，见下图）
+- ✅ **从零跑通预训练 → SFT → LoRA → DPO 全链路**（均为迷你验证跑，真实 loss 曲线见 [复现日志](docs/复现日志.md)）
 - ✅ **验证推理链路**：用原作者 MiniMind2 权重跑通对话（[对话记录](results/demo_chat_official_weights.md)）
-- ✅ 阅读并逐行理解核心代码、数据管线与训练流程，记录数据集改名等真实踩坑
+- ✅ 阅读并逐行理解核心代码，整理[**模型架构讲解笔记**](docs/架构讲解.md)（RoPE/RMSNorm/GQA/SwiGLU/MoE）
 - 🔲 *（进行中）* 在完整数据集上跑完整预训练 / SFT / DPO 等阶段
 
 ### 📊 我的迷你预训练 Loss 曲线（真实结果）
@@ -42,9 +42,9 @@ MiniMind 是一个极简的类 GPT 结构（Transformer Decoder，支持 RoPE、
 | 训练分词器 | `trainer/train_tokenizer.py` | 从零训练 BPE 分词器 | 🔲 |
 | 预训练 Pretrain | `trainer/train_pretrain.py` | 学习语言知识 | ✅ 迷你验证跑 |
 | 推理 Demo（官方权重） | `scripts/demo_chat.py` | 验证推理链路/对话 | ✅ |
-| 监督微调 SFT | `trainer/train_full_sft.py` | 学习对话格式 | 🔲 |
-| LoRA 微调 | `trainer/train_lora.py` | 参数高效微调 | 🔲 |
-| 偏好优化 DPO | `trainer/train_dpo.py` | 对齐人类偏好 | 🔲 |
+| 监督微调 SFT | `trainer/train_full_sft.py` | 学习对话格式 | ✅ 迷你验证跑 |
+| LoRA 微调 | `trainer/train_lora.py` | 参数高效微调 | ✅ 迷你验证跑 |
+| 偏好优化 DPO | `trainer/train_dpo.py` | 对齐人类偏好 | ✅ 迷你验证跑 |
 | 知识蒸馏 | `trainer/train_distillation.py` | 大模型教小模型 | 🔲 |
 | 推理蒸馏 | `trainer/train_reason.py` | 复现 R1 式推理 | 🔲 |
 | 强化学习 | `trainer/train_ppo.py` / `train_grpo.py` / `train_spo.py` | RLHF | 🔲 |
@@ -108,6 +108,7 @@ python scripts/web_demo.py    # 网页 demo
 ├── eval_llm.py         # 模型评测 / 对话
 ├── docs/
 │   ├── 复现日志.md      # ⭐ 我的逐阶段复现记录（核心）
+│   ├── 架构讲解.md      # ⭐ 读源码整理的模型架构笔记（RoPE/GQA/MoE...）
 │   ├── 环境搭建.md      # 环境与依赖踩坑
 │   └── reference/      # 原作者 README 归档
 ├── results/            # 我的 loss 曲线 / 对话样例

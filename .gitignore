@@ -1,4 +1,40 @@
-model/__pycache__
-out
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ===== 虚拟环境 (绝不提交) =====
+.venv/
+venv/
+env/
+
+# ===== 原作者的预训练权重 (从 HuggingFace 下载, 非本人复现产出) =====
+MiniMind2/
+
+# ===== 训练输出 / 模型权重 =====
+out/
+*.pth
+*.safetensors
+
+# ===== 数据集 (体积大, 需自行下载) =====
+dataset/*.jsonl
+dataset/*.json
+dataset/*.csv
+dataset/*.parquet
+dataset/*.bin
+
+# ===== 原项目残留 =====
 website/
 docs-minimind/
+
+# ===== 编辑器 / 系统 =====
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ===== 日志 / 实验记录 =====
+*.log
+wandb/
+runs/

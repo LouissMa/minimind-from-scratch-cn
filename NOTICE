@@ -1,0 +1,27 @@
+minimind-from-scratch-cn
+========================
+
+本项目（minimind-from-scratch-cn）是对开源项目 MiniMind 的学习复现，
+在 Apache License 2.0 下发布。
+
+原始项目
+--------
+MiniMind
+Copyright (c) jingyaogong
+项目地址: https://github.com/jingyaogong/minimind
+许可证: Apache License 2.0
+
+本项目所依据的模型结构、训练算法与核心代码均来自上述原始项目，
+版权归原作者所有，特此致谢。
+
+本项目所做的修改（按 Apache License 2.0 第 4(b) 条要求声明）
+-----------------------------------------------------------
+本仓库在原项目基础上进行了如下修改，用于个人学习与复现记录：
+
+- 重写 README，明确标注为学习复现项目并保留对原作者的署名与链接。
+- 新增 docs/ 复现文档（复现日志、环境搭建记录）。
+- 将原项目 README 归档至 docs/reference/ 以供参考。
+- 调整 .gitignore，排除虚拟环境、预训练权重与数据集文件。
+- 后续在复现过程中对训练脚本/超参的任何改动，将在 docs/复现日志.md 中逐项记录。
+
+原项目未做修改的源代码文件仍保留其原始版权与许可证声明。
